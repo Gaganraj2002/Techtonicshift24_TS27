@@ -2,20 +2,10 @@ import asyncio
 import websockets
 import cv2
 import base64
-import serial
-import serial.tools.list_ports
 
 # Define servo and suction states
 servo_values = [110, 100, 140, 90, 135]  # Initial servo angles
 suction_state = 0  # Initial suction state (0: Off, 1: On)
-
-
-def send_serial_data():
-    global servo_values, suction_state, ser
-    main_list = servo_values + [suction_state]
-    message = "*" + ",".join([str(val) for val in main_list]) + "#"
-    ser.write(message)
-    print("sent:", message)
 
 
 async def send_camera_feed(websocket):
@@ -52,7 +42,6 @@ async def handle_message(websocket, message):
             suction_state = int(servo_values_str[-1])
             print("Servo values updated:", servo_values)
             print("Suction state updated:", suction_state)
-            send_serial_data()
 
 
 async def handle_client(websocket, path):
@@ -75,13 +64,4 @@ async def main():
         await asyncio.Future()  # Keep the server running
 
 
-port = None
-for p in serial.tools.list_ports.comports():
-    if 9025 == p.vid:
-        port = p.device
-        break
-if port is None:
-    raise Exception("Arduino not found!")
-ser = serial.Serial(port, 230400, timeout=1)
-ser.flush()
 asyncio.run(main())
