@@ -87,15 +87,15 @@ class _SocketClientPageState extends State<SocketClientPage> {
                                 MaterialStateProperty.resolveWith<Color>(
                               (states) {
                                 return servoValues[index] == 0
-                                    ? Colors.red
-                                    : Colors.green;
+                                    ? Colors.green
+                                    : Colors.red;
                               },
                             ),
                             minimumSize:
                                 MaterialStateProperty.all<Size>(Size(150, 48)),
                           ),
                           child: Text(
-                            servoValues[index] == 0 ? 'Off' : 'On',
+                            servoValues[index] == 0 ? 'On' : 'Off',
                             style: TextStyle(fontSize: 16),
                           ),
                         )

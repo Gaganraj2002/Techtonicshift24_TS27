@@ -14,7 +14,7 @@ def send_serial_data():
     global servo_values, suction_state, ser
     main_list = servo_values + [suction_state]
     message = "*" + ",".join([str(val) for val in main_list]) + "#"
-    ser.write(message)
+    ser.write(message.encode())
     print("sent:", message)
 
 
