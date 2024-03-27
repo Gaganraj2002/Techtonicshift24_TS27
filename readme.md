@@ -49,17 +49,17 @@ The Arm Controller project allows users to remotely control the movements and op
 
 ### App Interface
 
-    -![iOS interface](images/iOS.png)
+    -![iOS interface](https://github.com/Gaganraj2002/Techtonicshift24_TS27/blob/main/images/iOS.png)
 
-    -![Android interface](images/Android.png)
+    -![Android interface](https://github.com/Gaganraj2002/Techtonicshift24_TS27/blob/main/images/Android.png)
 
 ### Arm Pictures
 
-    ![ARM](images/arm1.png)
+    ![ARM](https://github.com/Gaganraj2002/Techtonicshift24_TS27/blob/main/images/arm1.png)
 
-    ![ARM](images/arm2.png)
+    ![ARM](https://github.com/Gaganraj2002/Techtonicshift24_TS27/blob/main/images/arm2.png)
 
-    ![ARM](images/arm3.jpeg)
+    ![ARM](https://github.com/Gaganraj2002/Techtonicshift24_TS27/blob/main/images/arm3.jpeg)
 
 ### Contributing
 Contributions are welcome! Feel free to open issues or pull requests for any improvements or fixes.
